@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isToday } from 'date-fns';
+import { format, startOfMonth, endOfMonth, eachDayOfInterval } from 'date-fns';
 
 interface TimelineTask {
   id: string;
@@ -12,7 +12,7 @@ interface TimelineTask {
 }
 
 const Timeline: React.FC = () => {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate] = useState(new Date());
   const [tasks, setTasks] = useState<TimelineTask[]>([
     {
       id: '1',

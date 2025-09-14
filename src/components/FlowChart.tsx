@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { Plus, ArrowRight, Type, User, Save, Download } from 'lucide-react';
+import { Plus, Save, Download } from 'lucide-react';
 
 interface FlowElement {
   id: string;

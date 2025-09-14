@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { LogOut, User } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 import Dashboard from './Dashboard';
 import TaskAllotment from './TaskAllotment';
 import Timeline from './Timeline';

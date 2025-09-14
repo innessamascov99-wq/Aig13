@@ -13,7 +13,7 @@ interface TimelineTask {
 
 const Timeline: React.FC = () => {
   const [currentDate] = useState(new Date());
-  const [tasks, setTasks] = useState<TimelineTask[]>([
+  const [tasks] = useState<TimelineTask[]>([
     {
       id: '1',
       title: 'Business proposal plan',
@@ -120,7 +120,7 @@ const Timeline: React.FC = () => {
             </div>
             <div className="flex-1 relative">
               <div className="flex">
-                {['JAN', 'FEB', 'MAR', 'APR', 'MAY'].map((month, index) => (
+                {['JAN', 'FEB', 'MAR', 'APR', 'MAY'].map((month) => (
                   <div key={month} className="flex-1 px-4 py-4 text-center text-sm font-medium text-gray-600 border-r border-gray-200 last:border-r-0">
                     {month}
                   </div>

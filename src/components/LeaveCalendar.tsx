@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Plus, User, Calendar as CalendarIcon } from 'lucide-react';
-import { format, isSameDay } from 'date-fns';
+import { format } from 'date-fns';
 import { Leave } from '../types';
 import 'react-calendar/dist/Calendar.css';
 
@@ -201,7 +201,11 @@ const LeaveCalendar: React.FC = () => {
               }
             `}</style>
             <Calendar
-              onChange={setSelectedDate}
+              onChange={(value) => {
+                if (value instanceof Date) {
+                  setSelectedDate(value);
+                }
+              }}
               value={selectedDate}
               tileContent={tileContent}
               tileClassName={tileClassName}

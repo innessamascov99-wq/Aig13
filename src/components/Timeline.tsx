@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Plus, Edit3 } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isToday } from 'date-fns';
 
 interface TimelineTask {

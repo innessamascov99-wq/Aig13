@@ -52,7 +52,7 @@ const TaskAllotment: React.FC = () => {
   const [newTask, setNewTask] = useState({
     title: '',
     description: '',
-    status: 'backlog' as const,
+    status: 'backlog' as Task['status'],
   });
 
   const columns = [
